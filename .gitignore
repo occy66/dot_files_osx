@@ -1,0 +1,15 @@
+#        OS generated files          #
+######################################
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+
+#             Folders                #
+######################################
+
+#              Files                 #
+######################################
+bash_aliases
+ssh_config
+gitconfiglavoro
+gitconfig
