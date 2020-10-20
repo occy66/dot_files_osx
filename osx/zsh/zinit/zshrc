@@ -100,7 +100,7 @@ alias man=batman.sh
 zinit ice from"gh-r" as"program" mv"ripgrep* -> ripgrep" pick"ripgrep/rg"
 zinit light BurntSushi/ripgrep
 # NEOVIM
-zinit ice lucid wait from"gh-r" as"program" pick"./*/*/nvim"
+zinit ice lucid wait from"gh-r" as"program" ver"stable" pick"./*/*/nvim"
 zinit light neovim/neovim
 # FORGIT
 zinit ice wait lucid
@@ -124,6 +124,9 @@ zinit light "cli/cli"
 # zinit ice as"completion"; zinit snippet /usr/share/google-cloud-sdk/completion.zsh.inc
 # TMUXINATOR
 zinit ice as"completion"; zinit snippet ~/.nubem_dot_files/extras/tmuxinator/tmuxinator.zsh
+# BIT
+zinit ice lucid wait"0" as"program" from"gh-r" pick"bit"
+zinit light "chriswalz/bit"
 # ZSH DIFF SO FANCY
 # zinit ice wait"2" lucid as"program" pick"bin/git-dsf"
 # zinit light zdharma/zsh-diff-so-fancy
