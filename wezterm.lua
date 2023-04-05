@@ -94,6 +94,8 @@ return {
   tab_bar_at_bottom = true,
   hide_tab_bar_if_only_one_tab = true,
   show_tab_index_in_tab_bar = false,
+  initial_cols = 160,
+  initial_rows = 48,
   -- window_decorations = "NONE",
   window_frame = {
     -- The font used in the tab bar.
@@ -139,8 +141,13 @@ return {
     { mods = mod, key = "C", action = act.CopyTo("ClipboardAndPrimarySelection") },
     { mods = mod, key = "l", action = wezterm.action({ ActivateTabRelative = 1 }) },
     { mods = mod, key = "h", action = wezterm.action({ ActivateTabRelative = -1 }) },
-    { key = "C", mods = "CTRL", action = wezterm.action.CopyTo("ClipboardAndPrimarySelection") },
     { mods = mod, key = "d", action = wezterm.action.ShowDebugOverlay },
+    { key = "C", mods = "CTRL", action = wezterm.action.CopyTo("ClipboardAndPrimarySelection") },
+    { key = "c", mods = "SUPER", action = wezterm.action.CopyTo("ClipboardAndPrimarySelection") },
+    { key = 'V', mods = 'CTRL', action = act.PasteFrom 'Clipboard' },
+    { key = 'V', mods = 'CTRL', action = act.PasteFrom 'PrimarySelection' },
+    { key = 'v', mods = 'SUPER', action = act.PasteFrom 'Clipboard' },
+    { key = 'v', mods = 'SUPER', action = act.PasteFrom 'PrimarySelection' },
   },
   bold_brightens_ansi_colors = true,
   window_background_opacity = 0.9,
